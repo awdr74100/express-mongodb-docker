@@ -8,7 +8,7 @@ export const addProduct = async (req, res) => {
 
     res.send({ success: true, message: 'added' });
   } catch (error) {
-    res.send({ success: false, message: error.message });
+    res.status(500).send({ success: false, message: error.message });
   }
 };
 
@@ -18,7 +18,7 @@ export const getProducts = async (req, res) => {
 
     res.send({ success: true, products });
   } catch (error) {
-    res.send({ success: false, message: error.message });
+    res.status(500).send({ success: false, message: error.message });
   }
 };
 
@@ -31,7 +31,7 @@ export const updateProduct = async (req, res) => {
 
     res.send({ success: true, message: 'updated' });
   } catch (error) {
-    res.send({ success: false, message: error.message });
+    res.status(500).send({ success: false, message: error.message });
   }
 };
 
@@ -43,6 +43,6 @@ export const deleteProduct = async (req, res) => {
 
     res.send({ success: true, message: 'deleted' });
   } catch (error) {
-    res.send({ success: false, message: error.message });
+    res.status(500).send({ success: false, message: error.message });
   }
 };
