@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon -r dotenv/config -r jiti/register app.js",
     "start": "NODE_ENV=development node -r jiti/register app.js",
-    "lint": "cross-env NODE_ENV=production eslint \"**/*.{js}\"",
-    "pretty": "cross-env NODE_ENV=production prettier --write \"**/*.{js}\""
+    "lint": "cross-env NODE_ENV=production eslint \"**/*.js\"",
+    "pretty": "cross-env NODE_ENV=production prettier --write \"**/*.js\""
   },
   "keywords": [],
   "author": "Lan",
