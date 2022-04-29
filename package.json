@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "dev": "cross-env NODE_ENV=development nodemon -r dotenv/config -r jiti/register app.js",
-    "start": "NODE_ENV=development node -r jiti/register app.js",
+    "start": "cross-env NODE_ENV=production node -r jiti/register app.js",
     "lint": "cross-env NODE_ENV=production eslint \"**/*.js\"",
     "pretty": "cross-env NODE_ENV=production prettier --write \"**/*.js\""
   },
@@ -15,6 +15,7 @@
   "dependencies": {
     "cors": "^2.8.5",
     "express": "^4.18.0",
+    "mongoose": "^6.3.1",
     "morgan": "^1.10.0"
   },
   "devDependencies": {
