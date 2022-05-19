@@ -1,5 +1,7 @@
 # Docker Cheat Sheet
 
+> MONGODB_URL = mongodb://localhost:27017/shop
+
 ## Docker CLI
 
 - [docker run](#docker-run)
