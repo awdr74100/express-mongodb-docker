@@ -1,0 +1,22 @@
+version: '3.9'
+services:
+  express:
+    container_name: Express
+    environment:
+      - MONGODB_URL=mongodb://mongodb:27017/shop
+    build:
+      context: ./
+      dockerfile: Dockerfile
+    image: express:latest
+    ports:
+      - 3000:3000
+    depends_on:
+      - mongo
+  mongo:
+    container_name: MongoDB
+    image: mongo:5
+    ports:
+      - 27017:27017
+
+volumes:
+  mongo_data:
